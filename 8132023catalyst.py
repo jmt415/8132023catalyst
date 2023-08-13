@@ -145,7 +145,7 @@ def get_vectors_and_metadata(all_texts, all_filing_urls, articles, embeddings):
                     "publishedAt": article["publishedAt"],
                 }
             )
-    return all_doc_s, all_doc_ids, metadata_list
+    return all_doc_embeddings, all_doc_ids, metadata_list
 
 def upsert_s_to_pinecone(index_name, doc_s, all_doc_ids, metadata_list, PINECONE_API_KEY, namespace):
     pinecone.init(api_key=PINECONE_API_KEY, environment="asia-southeast1-gcp")
