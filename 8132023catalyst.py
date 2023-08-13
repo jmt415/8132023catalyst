@@ -10,6 +10,7 @@ import openai
 import re
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
+import tiktoken
 
 SEC_API_KEY = "09587f5492da2c54e2175dda1b8bfaea4f3486a4f9f131656ec170a6bbb93c27"
 NEWSFILTER_API_KEY = "26c64fd9c7444d23a1729d51f78e3e4cc0e2f6c594284c1f8938137ebc6bcd96"
