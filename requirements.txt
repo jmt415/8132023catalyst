@@ -6,3 +6,4 @@ pinecone-client
 scikit-learn
 streamlit
 langchain
+tiktoken
