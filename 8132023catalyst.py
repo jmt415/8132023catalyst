@@ -16,7 +16,7 @@ SEC_API_KEY = "09587f5492da2c54e2175dda1b8bfaea4f3486a4f9f131656ec170a6bbb93c27"
 NEWSFILTER_API_KEY = "26c64fd9c7444d23a1729d51f78e3e4cc0e2f6c594284c1f8938137ebc6bcd96"
 PINECONE_API_KEY = "7348ef3c-81cb-4d25-80ad-e1ac4a5a6076"
 API_ENDPOINT = "https://api.newsfilter.io/search?token={}".format(NEWSFILTER_API_KEY)
-openai_api_key = "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"
+openai_api_key = "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"
 
 os.environ["OPENAI_API_KEY"] = openai_api_key
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
