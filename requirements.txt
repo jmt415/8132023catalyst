@@ -1,0 +1,8 @@
+requests
+bs4
+numpy
+openai
+pinecone
+scikit-learn
+streamlit
+langchain
