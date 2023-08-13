@@ -145,16 +145,16 @@ def get_vectors_and_metadata(all_texts, all_filing_urls, articles, embeddings):
                     "publishedAt": article["publishedAt"],
                 }
             )
-    return all_doc_embeddings, all_doc_ids, metadata_list
+    return all_doc_s, all_doc_ids, metadata_list
 
-def upsert_embeddings_to_pinecone(index_name, doc_embeddings, all_doc_ids, metadata_list, PINECONE_API_KEY, namespace):
+def upsert_s_to_pinecone(index_name, doc_s, all_doc_ids, metadata_list, PINECONE_API_KEY, namespace):
     pinecone.init(api_key=PINECONE_API_KEY, environment="asia-southeast1-gcp")
     index = pinecone.Index(index_name)
-    vectors = [{"id": doc_id, "values": embedding, "metadata": metadata} for doc_id, embedding, metadata in zip(all_doc_ids, doc_embeddings, metadata_list)]
+    vectors = [{"id": doc_id, "values": , "metadata": metadata} for doc_id, , metadata in zip(all_doc_ids, doc_s, metadata_list)]
     add_to_pinecone_index(vectors, index, namespace=namespace)
 
 def upload_vectors_to_pinecone(symbol):
-    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    embeddings = OpenAIEmbeddings(api_key=openai_api_key)
     symbol = symbol.upper()
     articles = get_articles(symbol)
     all_texts = []
