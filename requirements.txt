@@ -2,6 +2,7 @@ requests
 bs4
 numpy
 openai
+pinecone-client
 scikit-learn
 streamlit
 langchain
