@@ -150,7 +150,7 @@ def get_vectors_and_metadata(all_texts, all_filing_urls, articles, embeddings):
 def upsert_s_to_pinecone(index_name, doc_s, all_doc_ids, metadata_list, PINECONE_API_KEY, namespace):
     pinecone.init(api_key=PINECONE_API_KEY, environment="asia-southeast1-gcp")
     index = pinecone.Index(index_name)
-    vectors = [{"id": doc_id, "values": embedding, "metadata": metadata} for doc_id, , metadata in zip(all_doc_ids, doc_s, metadata_list)]
+    vectors = [{"id": doc_id, "values": , "metadata": metadata} for doc_id, metadata in zip(all_doc_ids, doc_s, metadata_list)]
     add_to_pinecone_index(vectors, index, namespace=namespace)
 
 def upload_vectors_to_pinecone(symbol):
