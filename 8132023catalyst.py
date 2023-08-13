@@ -154,7 +154,7 @@ def upsert_s_to_pinecone(index_name, doc_s, all_doc_ids, metadata_list, PINECONE
     add_to_pinecone_index(vectors, index, namespace=namespace)
 
 def upload_vectors_to_pinecone(symbol):
-    embeddings = OpenAIEmbeddings(api_key=openai_api_key)
+    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
     symbol = symbol.upper()
     articles = get_articles(symbol)
     all_texts = []
